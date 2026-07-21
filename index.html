@@ -1,44 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #333; color: #fff; padding: 20px; text-align: center; }
-        section { padding: 20px; }
-        h2 { color: #333; }
-        .photo { text-align: center; margin: 20px 0; }
-        .about { margin: 20px 0; }
-        .papers { margin: 20px 0; }
-        .papers ul { list-style-type: none; padding: 0; }
-        .papers li { margin: 10px 0; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic website of John Veliz, mathematician working in algebraic combinatorics, algebraic geometry, and mathematical physics.">
+  <title>John Veliz | Mathematics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <h1>Welcome to My Portfolio</h1>
-</header>
-<section class="photo">
-    <h2>Photo Section</h2>
-    <img src="your-photo.jpg" alt="Your Photo" width="300" height="auto">
-</section>
-<section class="about">
-    <h2>About Me</h2>
-    <p> I'm an incoming mathematics graduate student at UT Austin. I completed by undergrad at Cornell University in 2026. 
-    
-    I'm interested in algebraic geometry, algberaic combinatorics, representation theory, and mathematical physics. 
-        
-    </p>
-</section>
-<section class="papers">
-    <h2>My Papers</h2>
-    <ul>
-        <li><a href="link-to-paper1.pdf">Paper Title 1</a> - Brief description of paper 1.</li>
-        <li><a href="link-to-paper2.pdf">Paper Title 2</a> - Brief description of paper 2.</li>
-        <li><a href="link-to-paper3.pdf">Paper Title 3</a> - Brief description of paper 3.</li>
-    </ul>
-</section>
+  <header class="site-header">
+    <a class="brand" href="#top">John Veliz</a>
+    <nav aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#writing">Writing</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">Mathematics</p>
+      <h1 id="hero-title">John Veliz</h1>
+      <p class="lede">Incoming Ph.D. student at The University of Texas at Austin.</p>
+      <p class="interests">Algebraic combinatorics · Algebraic geometry · Mathematical physics</p>
+      <div class="actions">
+        <a class="button primary" href="#research">View research</a>
+        <a class="button secondary" href="#writing">Read thesis</a>
+      </div>
+    </section>
+
+    <section id="about" class="section two-column">
+      <div>
+        <p class="section-label">About</p>
+        <h2>Mathematics across geometry, combinatorics, and physics.</h2>
+      </div>
+      <div class="prose">
+        <p>I completed my undergraduate studies at Cornell University and am starting a Ph.D. in mathematics at The University of Texas at Austin.</p>
+        <p>My interests are algebraic combinatorics, algebraic geometry, and mathematical physics.</p>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <p class="section-label">Research</p>
+      <h2>Preprint</h2>
+      <article class="card featured">
+        <div class="card-meta">arXiv:2311.15441 · 2023</div>
+        <h3>Lattice Path Delta Matroids</h3>
+        <p class="authors">Douglas M. Chen, Mario Sanchez, John Veliz, and Zhiyan Ying</p>
+        <p>We initiate the study of a type C<sub>n</sub> generalization of lattice path matroids, describing their combinatorics and the convex geometry of their feasible polytopes.</p>
+        <div class="card-links">
+          <a href="https://arxiv.org/abs/2311.15441">Abstract on arXiv <span aria-hidden="true">↗</span></a>
+          <a href="https://arxiv.org/pdf/2311.15441">PDF <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section id="writing" class="section">
+      <p class="section-label">Writing</p>
+      <h2>Senior thesis</h2>
+      <article class="card">
+        <div class="card-meta">Cornell University · 2026</div>
+        <h3>Quantum Cohomology</h3>
+        <p class="authors">Senior thesis · Faculty supervisor: Rachel Webb</p>
+        <p>An introduction to moduli spaces of curves and stable maps, Gromov–Witten invariants, and small quantum cohomology, concluding with the quantum Pieri and Giambelli formulas for Grassmannians.</p>
+        <div class="card-links">
+          <a href="assets/john-veliz-senior-thesis.pdf">Read PDF</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> John Veliz</p>
+    <p>Built as a lightweight static site for GitHub Pages.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
